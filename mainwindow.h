@@ -12,6 +12,9 @@
 #include "proxy/ryproxyserver.h"
 #include "ryupdatechecker.h"
 
+#include <QMenu>
+#include <QMainWindow>
+
 using namespace rule;
 
 namespace Ui {

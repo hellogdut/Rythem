@@ -5,6 +5,10 @@
 #include "rytablesortfilterproxymodel.h"
 
 #include "rymimedata.h"
+#include <QAction>
+#include <QMenu>
+#include <QFileDialog>
+
 
 extern QString appPath;
 extern QByteArray gzipDecompress(QByteArray data);

@@ -3,6 +3,8 @@
 #include <QVector>
 #include <QStringList>
 #include <QDebug>
+#include <QColor>
+#include <QtGlobal>
 
 RyTableModel::RyTableModel(QObject *parent) :
     QAbstractTableModel(parent),_pipeNumber(0),_maxRequestSize(30){
@@ -91,13 +93,17 @@ QVariant RyTableModel::data(const QModelIndex &index, int role) const{
             RyPipeData_ptr d = pipesVector.at(index.row());
             if(d->isMatchingRule){
                 if(d->isContentReplaced){
-                    return Qt::cyan;
+                    //return Qt::cyan;
+                    return 10;
+
                 }else{
-                    return Qt::darkGreen;
+                    //return Qt::darkGreen;
+                    return 14;
                 }
                 //return QVariant((int)Qt::cyan);
             }else if(d->responseStatus.startsWith('4') || d->responseStatus.startsWith('5')){
-                return Qt::lightGray;
+                //return Qt::lightGray;
+                return 6;
                 //return QVariant((int)Qt::darkCyan);
             }
         }else{

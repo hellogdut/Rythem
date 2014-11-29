@@ -9,6 +9,7 @@
 #include "windows.h"
 #include "proxy/rywinhttp.h"
 #endif
+
 #ifdef Q_OS_MAC
 #include "proxy/proxyautoconfig.h"
 #include <CoreFoundation/CoreFoundation.h>
@@ -28,7 +29,8 @@
 #include "rytablesortfilterproxymodel.h"
 #include "ryupdatechecker.h"
 #include <QWebFrame>
-
+#include <QMessageBox>
+#include <QFileDialog>
 extern QString version;
 extern QString appPath;
 

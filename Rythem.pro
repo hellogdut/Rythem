@@ -105,8 +105,7 @@ FORMS    += mainwindow.ui \
 mac:CONFIG += app_bundle
 
 
-
-win32:LIBS += D:\QtSDK\mingw\lib\libwininet.a
+win32:LIBS += C:\Qt\Qt5.3.2\Tools\mingw482_32\i686-w64-mingw32\lib\libwininet.a
 mac:LIBS += -framework SystemConfiguration -framework coreFoundation -lz
 unix:LIBS += -lz
 
@@ -174,3 +173,8 @@ TRANSLATIONS = rythem_zh_CN.ts
 CODECFORTR = UTF-8
 
 
+
+win32: LIBS += -L$$PWD/zlib/ -lz
+
+INCLUDEPATH += $$PWD/zlib
+DEPENDPATH += $$PWD/zlib

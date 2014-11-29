@@ -25,53 +25,55 @@
 // INTERNET_OPTION_PER_CONNECTION_OPTION
 //
 
-typedef struct {
-    DWORD   dwOption;            // option to be queried or set
-    union {
-        DWORD    dwValue;        // dword value for the option
-        LPSTR    pszValue;       // pointer to string value for the option
-        FILETIME ftValue;        // file-time value for the option
-    } Value;
-} INTERNET_PER_CONN_OPTIONA, * LPINTERNET_PER_CONN_OPTIONA;
-typedef struct {
-    DWORD   dwOption;            // option to be queried or set
-    union {
-        DWORD    dwValue;        // dword value for the option
-        LPWSTR   pszValue;       // pointer to string value for the option
-        FILETIME ftValue;        // file-time value for the option
-    } Value;
-} INTERNET_PER_CONN_OPTIONW, * LPINTERNET_PER_CONN_OPTIONW;
-#ifdef UNICODE
-typedef INTERNET_PER_CONN_OPTIONW INTERNET_PER_CONN_OPTION;
-typedef LPINTERNET_PER_CONN_OPTIONW LPINTERNET_PER_CONN_OPTION;
-#else
-typedef INTERNET_PER_CONN_OPTIONA INTERNET_PER_CONN_OPTION;
-typedef LPINTERNET_PER_CONN_OPTIONA LPINTERNET_PER_CONN_OPTION;
-#endif // UNICODE
 
-typedef struct {
-    DWORD   dwSize;             // size of the INTERNET_PER_CONN_OPTION_LIST struct
-    LPSTR   pszConnection;      // connection name to set/query options
-    DWORD   dwOptionCount;      // number of options to set/query
-    DWORD   dwOptionError;      // on error, which option failed
-    LPINTERNET_PER_CONN_OPTIONA  pOptions;
-                                // array of options to set/query
-} INTERNET_PER_CONN_OPTION_LISTA, * LPINTERNET_PER_CONN_OPTION_LISTA;
-typedef struct {
-    DWORD   dwSize;             // size of the INTERNET_PER_CONN_OPTION_LIST struct
-    LPWSTR  pszConnection;      // connection name to set/query options
-    DWORD   dwOptionCount;      // number of options to set/query
-    DWORD   dwOptionError;      // on error, which option failed
-    LPINTERNET_PER_CONN_OPTIONW  pOptions;
-                                // array of options to set/query
-} INTERNET_PER_CONN_OPTION_LISTW, * LPINTERNET_PER_CONN_OPTION_LISTW;
-#ifdef UNICODE
-typedef INTERNET_PER_CONN_OPTION_LISTW INTERNET_PER_CONN_OPTION_LIST;
-typedef LPINTERNET_PER_CONN_OPTION_LISTW LPINTERNET_PER_CONN_OPTION_LIST;
-#else
-typedef INTERNET_PER_CONN_OPTION_LISTA INTERNET_PER_CONN_OPTION_LIST;
-typedef LPINTERNET_PER_CONN_OPTION_LISTA LPINTERNET_PER_CONN_OPTION_LIST;
-#endif // UNICODE
+//typedef struct {
+//    DWORD   dwOption;            // option to be queried or set
+//    union {
+//        DWORD    dwValue;        // dword value for the option
+//        LPSTR    pszValue;       // pointer to string value for the option
+//        FILETIME ftValue;        // file-time value for the option
+//    } Value;
+//} INTERNET_PER_CONN_OPTIONA, * LPINTERNET_PER_CONN_OPTIONA;
+
+//typedef struct {
+//    DWORD   dwOption;            // option to be queried or set
+//    union {
+//        DWORD    dwValue;        // dword value for the option
+//        LPWSTR   pszValue;       // pointer to string value for the option
+//        FILETIME ftValue;        // file-time value for the option
+//    } Value;
+//} INTERNET_PER_CONN_OPTIONW, * LPINTERNET_PER_CONN_OPTIONW;
+//#ifdef UNICODE
+//typedef INTERNET_PER_CONN_OPTIONW INTERNET_PER_CONN_OPTION;
+//typedef LPINTERNET_PER_CONN_OPTIONW LPINTERNET_PER_CONN_OPTION;
+//#else
+//typedef INTERNET_PER_CONN_OPTIONA INTERNET_PER_CONN_OPTION;
+//typedef LPINTERNET_PER_CONN_OPTIONA LPINTERNET_PER_CONN_OPTION;
+//#endif // UNICODE
+
+//typedef struct {
+//    DWORD   dwSize;             // size of the INTERNET_PER_CONN_OPTION_LIST struct
+//    LPSTR   pszConnection;      // connection name to set/query options
+//    DWORD   dwOptionCount;      // number of options to set/query
+//    DWORD   dwOptionError;      // on error, which option failed
+//    LPINTERNET_PER_CONN_OPTIONA  pOptions;
+//                                // array of options to set/query
+//} INTERNET_PER_CONN_OPTION_LISTA, * LPINTERNET_PER_CONN_OPTION_LISTA;
+//typedef struct {
+//    DWORD   dwSize;             // size of the INTERNET_PER_CONN_OPTION_LIST struct
+//    LPWSTR  pszConnection;      // connection name to set/query options
+//    DWORD   dwOptionCount;      // number of options to set/query
+//    DWORD   dwOptionError;      // on error, which option failed
+//    LPINTERNET_PER_CONN_OPTIONW  pOptions;
+//                                // array of options to set/query
+//} INTERNET_PER_CONN_OPTION_LISTW, * LPINTERNET_PER_CONN_OPTION_LISTW;
+//#ifdef UNICODE
+//typedef INTERNET_PER_CONN_OPTION_LISTW INTERNET_PER_CONN_OPTION_LIST;
+//typedef LPINTERNET_PER_CONN_OPTION_LISTW LPINTERNET_PER_CONN_OPTION_LIST;
+//#else
+//typedef INTERNET_PER_CONN_OPTION_LISTA INTERNET_PER_CONN_OPTION_LIST;
+//typedef LPINTERNET_PER_CONN_OPTION_LISTA LPINTERNET_PER_CONN_OPTION_LIST;
+//#endif // UNICODE
 
 //
 // Options used in INTERNET_PER_CONN_OPTON struct
